@@ -13,7 +13,7 @@
 <body>
 
    <!-- navigation bar  start dekstop view-->
-<nav class="navbar bg-body-tertiary shadow-sm">
+<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary d-lg-block d-none shadow-sm">
     <div class="container-fluid pe-4 ps-4">
         <div class="company_logo">
             <a href="">
@@ -28,8 +28,8 @@
                   <li><a class="dropdown-item" href="index.html"><i class="bi bi-bar-chart-fill pe-2"></i>My Dashboard</a></li>
                   <li><a class="dropdown-item" href="index.html"><i class="bi bi-ui-checks pe-2"></i> All Form(s)</a></li>
                   <li><a class="dropdown-item" href="#"><i class="bi bi-person-fill pe-2"></i>My Profile</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="bi bi-database-fill pe-2"></i>My Queries</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="bi bi-pen-fill pe-2"></i>Change Password</a></li>
+                  <li><a class="dropdown-item" href="myQuery.html"><i class="bi bi-database-fill pe-2"></i>My Queries</a></li>
+                  <li><a class="dropdown-item" href="changePassword.html"><i class="bi bi-pen-fill pe-2"></i>Change Password</a></li>
                   <li><a class="dropdown-item" href="#"><i class="bi bi-vinyl-fill pe-2"></i>Logout</a></li>
                 </ul>
             </div>
@@ -37,27 +37,76 @@
 </nav>
 <!-- navigation bar end dekstop view  -->
 
+<!-- navigation bar for mobile view  -->
+<nav class="navbar navbar-expand-lg  sticky-top bg-body-tertiary p-0 d-lg-none shadow-sm">
+  <div class="container-fluid flex-nowrap">
+          <div class="logoITM  py-2">
+              <img src="https://in8cdn.npfs.co/uploads/college/image/646b454b867bd045762775_newlogoisu.png" alt="logo"  width="50%">
+            </div>
+            <div class="offcanvas-lines d-flex flex-grow-1 justify-content-end">
+              <a class="text-black"  data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                  <i class="bi bi-list fs-2 "></i>
+                </a>
+            </div>
+      
+    <div class="logomenu d-flex align-items-center">
+      
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header py-2">
+              <img src="https://in8cdn.npfs.co/uploads/college/image/646b454b867bd045762775_newlogoisu.png" alt="logo" width="50%px">
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="Dashboard py-2">
+                  <a class="" href="index.html"><i class="bi bi-bar-chart-fill pe-2"></i>My Dashboard</a>
+              </div>
+              <div class="Application py-2">
+                  <a href="index.html"><i class="bi bi-ui-checks-grid pe-2"></i> Application Form</a>
+              </div>
+              <div class="Profile py-2">
+                  <a class="" href="#"><i class="bi bi-person-fill pe-2"></i>My Profile</a>
+              </div>
+              <div class="myQuery py-2">
+                  <a class="" href="myQuery.html"><i class="bi bi-database-fill pe-2"></i>My Queries</a>
+              </div>
+              <div class="myPayment py-2">
+                  <a href="myPayment.html"><i class="bi bi-credit-card-2-back-fill pe-2"></i>My Payments</a>
+              </div>
+              <div class="Password py-2">
+                  <a class="" href="changePassword.html"><i class="bi bi-pen-fill pe-2"></i>Change Password</a>
+              </div>
+              <div class="Logout py-2">
+                  <a class="" href="index.html"><i class="bi bi-vinyl-fill pe-2"></i>Logout</a>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+  </nav>
+
+<!-- end mobile view nav   -->
+
 <!-- main content start -->
 <div class="main_div d-flex">
-    <div class="sub_div1 ">
+    <div class="sub_div1 d-lg-block d-none ">
         <ul class="list-unstyled ps-2 ">
-            <li class="list-items"><a href="" class="myanchor"><i class="bi bi-bar-chart-fill pe-2"></i>Dashboard</a></li>
-            <li class="list-items"><a href=""><i class="bi bi-ui-checks pe-2"></i> All Application Form(s)</a></li>
-            <li class="list-items"><a href=""><i class="bi bi-ui-checks-grid pe-2"></i> Application Form</a></li>
-            <li class="list-items"><a href=""><i class="bi bi-person-fill pe-2"></i>My Profile</a></li>
-            <li class="list-items"><a href=""><i class="bi bi-database-fill pe-2"></i>My Queries</a></li>
-            <li class="list-items"><a href=""><i class="bi bi-credit-card-2-back-fill pe-2"></i>My Payments</a></li>
+            <li class="list-items"><a href="index.html" class="myanchor"><i class="bi bi-bar-chart-fill pe-2"></i>Dashboard</a></li>
+            <li class="list-items"><a href="index.html"><i class="bi bi-ui-checks pe-2"></i> All Application Form(s)</a></li>
+            <li class="list-items"><a href="index.html"><i class="bi bi-ui-checks-grid pe-2"></i> Application Form</a></li>
+            <li class="list-items"><a href="#"><i class="bi bi-person-fill pe-2"></i>My Profile</a></li>
+            <li class="list-items"><a href="myQuery.html"><i class="bi bi-database-fill pe-2"></i>My Queries</a></li>
+            <li class="list-items"><a href="myPayment.html"><i class="bi bi-credit-card-2-back-fill pe-2"></i>My Payments</a></li>
             <li class="list-items"><a href=""><i class="bi bi-vinyl-fill pe-2"></i>Logout</a></li>
         </ul>
     </div>
     <div class="sub_div2 bg-light-subtle mb-4">
         <div class=" m-3 text-dark-emphasis d-flex justify-content-between">
             <h2>My Profile</h2>
-            <button class="btn btn-light btn-sm "><i class="bi bi-pen-fill pe-2"></i>Change Password</button>
+            <a href="changePassword.html"><button class="btn btn-light btn-sm "><i class="bi bi-pen-fill pe-2"></i>Change Password</button></a>
         </div>
         <hr class="ms-2 me-2">
 
-        <form class="ms-5 me-3 ">
+        <form class="ms-2 ms-md-5 me-3 ">
             <div class="row mb-3">
               <label for="name" class="col-sm-2 col-form-label">Email</label>
               <div class="col-sm-8">
