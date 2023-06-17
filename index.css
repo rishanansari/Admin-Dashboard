@@ -71,4 +71,8 @@ background-color: darkslategrey
     .mobcard-heading{
         width: 70%;
     }
+    /* dashboard card  */
+    .cards{
+        display: none !important;
+    }
 }
