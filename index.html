@@ -10,10 +10,10 @@
     
     <title>Admin Dashboard</title>
 </head>
-<body>
+<body class="pe-0">
 
    <!-- navigation bar  start dekstop view-->
-<nav class="navbar bg-body-tertiary shadow-sm">
+<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary d-lg-block d-none shadow-sm">
     <div class="container-fluid pe-4 ps-4">
         <div class="company_logo">
             <a href="">
@@ -28,8 +28,8 @@
                   <li><a class="dropdown-item" href="#"><i class="bi bi-bar-chart-fill pe-2"></i>My Dashboard</a></li>
                   <li><a class="dropdown-item" href="#"><i class="bi bi-ui-checks pe-2"></i> All Form(s)</a></li>
                   <li><a class="dropdown-item" href="myProfile.html"><i class="bi bi-person-fill pe-2"></i>My Profile</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="bi bi-database-fill pe-2"></i>My Queries</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="bi bi-pen-fill pe-2"></i>Change Password</a></li>
+                  <li><a class="dropdown-item" href="myQuery.html"><i class="bi bi-database-fill pe-2"></i>My Queries</a></li>
+                  <li><a class="dropdown-item" href="changePassword.html"><i class="bi bi-pen-fill pe-2"></i>Change Password</a></li>
                   <li><a class="dropdown-item" href="#"><i class="bi bi-vinyl-fill pe-2"></i>Logout</a></li>
                 </ul>
             </div>
@@ -37,16 +37,66 @@
 </nav>
 <!-- navigation bar end dekstop view  -->
 
+<!-- navigation bar for mobile view  -->
+<nav class="navbar navbar-expand-lg  sticky-top bg-body-tertiary p-0 d-lg-none shadow-sm">
+    <div class="container-fluid flex-nowrap">
+            <div class="logoITM  py-2">
+                <img src="https://in8cdn.npfs.co/uploads/college/image/646b454b867bd045762775_newlogoisu.png" alt="logo"  width="50%">
+              </div>
+              <div class="offcanvas-lines d-flex flex-grow-1 justify-content-end">
+                <a class="text-black"  data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <i class="bi bi-list fs-2 "></i>
+                  </a>
+              </div>
+        
+      <div class="logomenu d-flex align-items-center">
+        
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+              <div class="offcanvas-header py-2">
+                <img src="https://in8cdn.npfs.co/uploads/college/image/646b454b867bd045762775_newlogoisu.png" alt="logo" width="50%px">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="Dashboard py-2">
+                    <a class="" href="#"><i class="bi bi-bar-chart-fill pe-2"></i>My Dashboard</a>
+                </div>
+                <div class="Application py-2">
+                    <a href="#"><i class="bi bi-ui-checks-grid pe-2"></i> Application Form</a>
+                </div>
+                <div class="Profile py-2">
+                    <a class="" href="myProfile.html"><i class="bi bi-person-fill pe-2"></i>My Profile</a>
+                </div>
+                <div class="myQuery py-2">
+                    <a class="" href="myQuery.html"><i class="bi bi-database-fill pe-2"></i>My Queries</a>
+                </div>
+                <div class="myPayment py-2">
+                    <a href="myPayment.html"><i class="bi bi-credit-card-2-back-fill pe-2"></i>My Payments</a>
+                </div>
+                <div class="Password py-2">
+                    <a class="" href="changePassword.html"><i class="bi bi-pen-fill pe-2"></i>Change Password</a>
+                </div>
+                <div class="Logout py-2">
+                    <a class="" href="index.html"><i class="bi bi-vinyl-fill pe-2"></i>Logout</a>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+    </nav>
+
+<!-- end mobile view nav   -->
+
+
 <!-- main content start -->
 <div class="main_div d-flex">
-    <div class="sub_div1 ">
+    <div class="sub_div1 d-lg-block d-none">
         <ul class="list-unstyled ps-2 ">
             <li class="list-items"><a href="#" class="myanchor"><i class="bi bi-bar-chart-fill pe-2"></i>Dashboard</a></li>
             <li class="list-items"><a href="#"><i class="bi bi-ui-checks pe-2"></i> All Application Form(s)</a></li>
             <li class="list-items"><a href="#"><i class="bi bi-ui-checks-grid pe-2"></i> Application Form</a></li>
             <li class="list-items"><a href="myProfile.html"><i class="bi bi-person-fill pe-2"></i>My Profile</a></li>
-            <li class="list-items"><a href=""><i class="bi bi-database-fill pe-2"></i>My Queries</a></li>
-            <li class="list-items"><a href=""><i class="bi bi-credit-card-2-back-fill pe-2"></i>My Payments</a></li>
+            <li class="list-items"><a href="myQuery.html"><i class="bi bi-database-fill pe-2"></i>My Queries</a></li>
+            <li class="list-items"><a href="myPayment.html"><i class="bi bi-credit-card-2-back-fill pe-2"></i>My Payments</a></li>
             <li class="list-items"><a href=""><i class="bi bi-vinyl-fill pe-2"></i>Logout</a></li>
         </ul>
     </div>
@@ -55,7 +105,7 @@
             <h2>Dashboard</h2>
         </div>
         <hr class="ms-2 me-2">
-        <div class="cards d-flex flex-wrap">
+        <div class="cards d-flex flex-wrap d-lg-block d-none ">
             <div class="card1 d-flex m-2     p-3 text-white">
                 <div class="card-heading">
                     <h2 class="m-0">01</h2>
@@ -84,7 +134,8 @@
                 </div>
             </div>
         </div>
-        <table class="ms-2 mt-2 mb-2 bg-white text-center table-bordered" >
+        <!-- tabel content desktop viwe -->
+        <table class="ms-2 mt-2 mb-2 bg-white text-center table-bordered d-lg-block d-none" >
             <thead>
                 <tr >
                     <td>Application Form</td>
@@ -107,7 +158,51 @@
                 </tr>
             </tbody>
         </table>
+        <!-- table end dekstop view  -->
+
+        <!-- mobile view table data start   -->
+        <div class="mobileviewcard">
+                <a class="text-decoration-none" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <div class="mobcard d-flex m-2  p-3 text-white">
+                        <div class="mobcard-heading d-flex align-items-center flex-grow-1">
+                            <h2 class="m-0 pe-4">01</h2>
+                            <h6 class="m-0">Open Application</h6>
+                        </div>
+                        <div class="card-img d-flex justify-content-end ">
+                            <i class="bi bi-arrow-down-circle fs-1"></i>
+                        </div>
+                    </div>
+                </a>
+              <div class="collapse m-2" id="collapseExample">
+                <div class="card card-body">
+                  <h5 class="heading text-danger">Application Forms</h5>
+                  <div class="card">
+                    <p class="card-body m-0 pt-2 ps-3">Application Form</p>
+                    <h4 class="card-body pt-0 border-bottom border-danger">Bachelor of Technology Application Form</h4>
+                    <div class="card-body d-flex  justify-content-evenly border-bottom border-danger">
+                        <div class="appno">
+                            <p>Application No.</p>
+                            <p>-</p>
+                        </div>
+                        <div class="appsub">
+                            <p>Application Submitted On</p>
+                            <p>-</p>
+                        </div>
+                    </div>
+                    <div class="card-body border-bottom border-danger">
+                        <p>Application Fees</p>
+                        <p>Rs. 1000.00 / -</p>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="btn btn-warning">Continue</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <!-- mobile view table data end  -->
     </div>
+    
     
 </div>
 
